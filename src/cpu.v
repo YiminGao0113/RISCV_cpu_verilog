@@ -61,7 +61,7 @@ writebackstage ws(data_ms,rd_ms,func_ms,clk,we_ws,rd_ws,data_ws);
 
 arbiter a(addr_ms, addr_fetch, w_ms, r_ms, sel_ms, mdelay, jmp, AddrOut, we, re, sel, mdelay_ms, mdelay_fetch, stall_jmp_mem);
 
-regfile rf(clk,rst,rs1_ds,rs2_ds,rd_ds,rs1v,rs2v,we,data_ws,dataA_ds,dataB_ds);
+regfile rf(clk,rst,rs1_ds,rs2_ds,rd_ds,rs1v,rs2v,we_ws,data_ws,dataA_ds,dataB_ds);
 
 regtracker rt(rs1v,rs2v,rdv,we_ws,rst,clk,rs1_ds,rs2_ds,rd_ds,rd_ws,jmp,stall_jmp_mem,stall_from_tracker);
 
