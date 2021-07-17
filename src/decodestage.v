@@ -47,7 +47,7 @@ decoder instdecoder(
 defparam instdecoder.width = width;
 
 
-always @(func_temp or rs1_temp or rs2_temp or rd_temp or rs1v_temp or rs2v_temp or rdv_temp or immediate or dataA or dataB or addr_temp) begin
+always @(*) begin
 	case (func_temp)
 		`ADDr || `SUBr || `SLLr || `SLTr || `SLTUr || `XORr ||`SRLr || `SRAr || `ORr || `ANDr: begin
 			left <= dataB;
