@@ -59,7 +59,7 @@ memorystage ms(clk,addr_es,data_es,rd_es,func_es,DataIn,mdelay_ms,addr_ms,DataOu
 
 writebackstage ws(data_ms,rd_ms,func_ms,clk,we_ws,rd_ws,data_ws);
 
-arbiter a(addr_ms, addr_fetch, w_ms, r_ms, sel_ms, mdelay, jmp, AddrOut, we, re, sel, mdelay_fetch, mdelay_ms, stall_jmp_mem);
+arbiter a(addr_ms, addr_fetch, w_ms, r_ms, sel_ms, mdelay, jmp, AddrOut, we, re, sel, mdelay_ms, mdelay_fetch, stall_jmp_mem);
 
 regfile rf(clk,rst,rs1_ds,rs2_ds,rd_ds,rs1v,rs2v,we,data_ws,dataA_ds,dataB_ds);
 
