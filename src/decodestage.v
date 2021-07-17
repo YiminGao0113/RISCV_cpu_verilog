@@ -100,10 +100,10 @@ end
 assign rs1 = rs1_temp;
 assign rs2 = rs2_temp;
 assign rd = rd_temp;
+assign rs1v = rs1v_temp;
+assign rs2v = rs2v_temp;
 
 assign func = (stall|jmp) ? `NOP : func_temp;
-assign rs1v = (stall|jmp) ? 1'b0 : rs1v_temp;
-assign rs2v = (stall|jmp) ? 1'b0 : rs2v_temp;
 assign rdv = (stall|jmp) ? 1'b0 : rdv_temp;
 
 endmodule
